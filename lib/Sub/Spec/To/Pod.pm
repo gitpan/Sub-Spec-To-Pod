@@ -1,6 +1,6 @@
 package Sub::Spec::To::Pod;
 BEGIN {
-  $Sub::Spec::To::Pod::VERSION = '0.15';
+  $Sub::Spec::To::Pod::VERSION = '0.16';
 }
 
 use 5.010;
@@ -233,7 +233,7 @@ sub gen_module_subs_pod {
         $specs->{$_}{name}     //= $_;
     }
 
-    join("", map { spec_to_usage(spec=>$specs->{$_}) } sort keys %$specs);
+    join("", map { spec_to_pod(spec=>$specs->{$_}) } sort keys %$specs);
 }
 
 1;
@@ -248,7 +248,7 @@ Sub::Spec::To::Pod - Generate POD documentation from sub spec
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 
@@ -312,6 +312,40 @@ This module uses L<Log::Any> logging framework.
 =head1 FUNCTIONS
 
 None of the functions are exported by default, but they are exportable.
+
+=head2 gen_module_subs_pod(%args) -> RESULT
+
+
+Arguments (C<*> denotes required arguments):
+
+=over 4
+
+=item * B<load> => I<bool> (default C<1>)
+
+Whether to load module using "require".
+
+=item * B<module>* => I<str>
+
+=item * B<path> => I<str>
+
+Specify exact path to load module (instead of relying on @INC).
+
+=item * B<specs> => I<hash>
+
+=back
+
+=head2 spec_to_pod(%args) -> RESULT
+
+
+Generate POD documentation from sub spec.
+
+Arguments (C<*> denotes required arguments):
+
+=over 4
+
+=item * B<spec>* => I<hash>
+
+=back
 
 =head1 SEE ALSO
 

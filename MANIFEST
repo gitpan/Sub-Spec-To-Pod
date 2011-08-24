@@ -6,7 +6,7 @@ MANIFEST.SKIP
 META.yml
 README
 dist.ini
-lib/Sub/Spec/Pod.pm
+lib/Sub/Spec/To/Pod.pm
 t/00-compile.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

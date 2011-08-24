@@ -2,7 +2,7 @@ NAME
     Sub::Spec::To::Pod - Generate POD documentation from sub spec
 
 VERSION
-    version 0.15
+    version 0.16
 
 SYNOPSIS
      % perl -MSub::Spec::To::Pod=gen_module_subs_pod \
@@ -63,6 +63,28 @@ DESCRIPTION
 
 FUNCTIONS
     None of the functions are exported by default, but they are exportable.
+
+  gen_module_subs_pod(%args) -> RESULT
+    Arguments ("*" denotes required arguments):
+
+    *   load => *bool* (default 1)
+
+        Whether to load module using "require".
+
+    *   module* => *str*
+
+    *   path => *str*
+
+        Specify exact path to load module (instead of relying on @INC).
+
+    *   specs => *hash*
+
+  spec_to_pod(%args) -> RESULT
+    Generate POD documentation from sub spec.
+
+    Arguments ("*" denotes required arguments):
+
+    *   spec* => *hash*
 
 SEE ALSO
     Sub::Spec

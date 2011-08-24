@@ -1,5 +1,10 @@
 Revision history for Sub::Spec::Pod
 
+0.16     2011-08-24
+
+         Bug fixes (module location and function name).
+
+
 0.15     2011-08-24
 
          Rename module to Sub::Spec::To::Pod, rename functions.
