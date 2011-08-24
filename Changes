@@ -1,0 +1,87 @@
+Revision history for Sub::Spec::Pod
+
+0.15     2011-08-24
+
+         Rename module to Sub::Spec::To::Pod, rename functions.
+
+
+0.14     2011-04-07
+
+         [ENHANCEMENTS]
+
+         - Parse 'features' clause and note in the POD about these features:
+           reverse, undo, pure, dry_run.
+
+
+0.13     2011-03-08
+
+         Fix small bug.
+
+         Parse result_naked clause.
+
+
+0.12     2011-02-23
+
+         Add argument: specs.
+
+         Rename argument: require -> load.
+
+
+0.11     2011-02-22
+
+         Use Sub::Spec::Utils
+
+
+0.10     2011-02-18
+
+         Generate documentation about response structure ([STATUSCODE, ERRMSG,
+         RESULT] + a paragraph explaining it).
+
+         Parse arg_aliases.
+
+
+0.09     2011-02-11
+
+         Remove mention of 'required_args'.
+
+
+0.08     2011-02-11
+
+         Build fix: missing dependency.
+
+
+0.07     2011-02-10
+
+         Formatting tweaks.
+
+
+0.06     2011-02-10
+
+         Packaging bug: backup files not removed.
+
+
+0.05     2011-02-10
+
+         Fix silly bug.
+
+
+0.04     2011-02-10
+
+         Fix schema clause ('in', not 'choices').
+
+
+0.03     2011-02-10
+
+         Formatting fixes & tweaks.
+
+
+0.02     2011-02-10
+
+         Add 'path' argument.
+
+         Fix small typo.
+
+
+0.01     2011-02-09
+
+         First release.

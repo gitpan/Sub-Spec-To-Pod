@@ -1,0 +1,84 @@
+NAME
+    Sub::Spec::To::Pod - Generate POD documentation from sub spec
+
+VERSION
+    version 0.15
+
+SYNOPSIS
+     % perl -MSub::Spec::To::Pod=gen_module_subs_pod \
+         -e'print gen_module_subs_pod(module=>"MyModule")'
+
+DESCRIPTION
+    This module generates API POD documentation from sub specs in a
+    specified module. Example specification:
+
+     our %SPEC;
+
+     $SPEC{sub1} = {
+         summary     => 'Summary of sub1.',
+         description => "Description of sub1 ...",
+         args        => {
+             arg1 => ['int*' => {
+                 summary => 'Blah ...',
+                 default => 0,
+             }],
+             arg2 => [str => {
+                 summary => 'Blah blah ...',
+                 ...
+             }
+         },
+     }
+     sub sub1 { ... }
+
+     $SPEC{sub2} = { ... };
+     sub sub2 { ... }
+
+    Example output:
+
+     =head2 sub1(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+
+     Summary of sub1.
+
+     Description of sub1...
+
+     Arguments (* denotes required arguments):
+
+     =over 4
+
+     =item * arg1* => INT (default 0)
+
+     Blah ...
+
+     =item * arg2 => STR (default none)
+
+     Blah blah ...
+
+     =back
+
+     =head2 sub2(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+
+     ...
+
+    This module uses Log::Any logging framework.
+
+FUNCTIONS
+    None of the functions are exported by default, but they are exportable.
+
+SEE ALSO
+    Sub::Spec
+
+    Sub::Spec::To::HTML
+
+    Sub::Spec::To::Org
+
+    Sub::Spec::To::Text
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
