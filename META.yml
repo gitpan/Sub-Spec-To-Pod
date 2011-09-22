@@ -15,12 +15,14 @@ meta-spec:
 name: Sub-Spec-To-Pod
 requires:
   Data::Dump::Partial: 0
+  Data::Sah::Util: 0
   JSON: 0
+  Lingua::EN::Numbers::Ordinate: 0
   List::MoreUtils: 0
   Log::Any: 0
-  Sub::Spec: 0.15
+  Sub::Spec: 1.0.4
   perl: 5.010000
 resources:
   homepage: http://search.cpan.org/dist/Sub-Spec-To-Pod/
   repository: http://github.com/sharyanto/perl-Sub-Spec-To-Pod
-version: 0.16
+version: 0.17
