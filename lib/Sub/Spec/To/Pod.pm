@@ -1,6 +1,6 @@
 package Sub::Spec::To::Pod;
 BEGIN {
-  $Sub::Spec::To::Pod::VERSION = '0.17';
+  $Sub::Spec::To::Pod::VERSION = '0.18';
 }
 
 use 5.010;
@@ -8,7 +8,7 @@ use strict;
 use warnings;
 use Log::Any '$log';
 
-use Data::Sah::Util;
+use Data::Sah;
 use Lingua::EN::Numbers::Ordinate;
 
 require Exporter;
@@ -20,7 +20,7 @@ our @EXPORT_OK = qw(spec_to_pod gen_module_subs_pod);
 our %SPEC;
 
 sub _parse_schema {
-    Data::Sah::Util::_parse_schema(@_);
+    Data::Sah::normalize_schema($_[0]);
 }
 
 $SPEC{spec_to_pod} = {
@@ -132,7 +132,7 @@ _
                 $prev_cat = $cat;
             }
 
-            $pod .= "=item * B<$name>".($ah0->{required} ? "*" : "")." => ";
+            $pod .= "=item * B<$name>".($ah0->{req} ? "*" : "")." => ";
             my $type;
             if ($arg->{type} eq 'any') {
                 my @schemas = map {_parse_schema($_)} @{$ah0->{of}};
@@ -276,7 +276,7 @@ Sub::Spec::To::Pod - Generate POD documentation from sub spec
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 SYNOPSIS
 

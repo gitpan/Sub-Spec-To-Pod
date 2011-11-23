@@ -15,7 +15,7 @@ meta-spec:
 name: Sub-Spec-To-Pod
 requires:
   Data::Dump::Partial: 0
-  Data::Sah::Util: 0
+  Data::Sah: 0
   JSON: 0
   Lingua::EN::Numbers::Ordinate: 0
   List::MoreUtils: 0
@@ -25,4 +25,4 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/Sub-Spec-To-Pod/
   repository: http://github.com/sharyanto/perl-Sub-Spec-To-Pod
-version: 0.17
+version: 0.18
