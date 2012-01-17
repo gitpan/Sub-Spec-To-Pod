@@ -2,7 +2,7 @@ NAME
     Sub::Spec::To::POD - Generate POD documentation from sub spec
 
 VERSION
-    version 0.19
+    version 0.20
 
 SYNOPSIS
      % perl -MSub::Spec::To::POD=gen_module_subs_pod \

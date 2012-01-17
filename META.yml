@@ -20,9 +20,10 @@ requires:
   Lingua::EN::Numbers::Ordinate: 0
   List::MoreUtils: 0
   Log::Any: 0
+  Package::Alias: 0
   Sub::Spec: 1.0.4
   perl: 5.010000
 resources:
   homepage: http://search.cpan.org/dist/Sub-Spec-To-POD/
   repository: http://github.com/sharyanto/perl-Sub-Spec-To-POD
-version: 0.19
+version: 0.20

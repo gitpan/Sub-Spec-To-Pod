@@ -1,5 +1,10 @@
 Revision history for Sub::Spec::To::POD
 
+0.20	 2012-01-16
+
+	 No functional changes. Add alias to old name Sub::Spec::To::Pod.
+
+
 0.19     2012-01-16
 
          No functional changes. Rename from Sub::Spec::To::Pod to

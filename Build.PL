@@ -17,7 +17,7 @@ my %module_build_args = (
     "Steven Haryanto <stevenharyanto\@gmail.com>"
   ],
   "dist_name" => "Sub-Spec-To-POD",
-  "dist_version" => "0.19",
+  "dist_version" => "0.20",
   "license" => "perl",
   "module_name" => "Sub::Spec::To::POD",
   "recommends" => {},
@@ -29,6 +29,7 @@ my %module_build_args = (
     "Lingua::EN::Numbers::Ordinate" => 0,
     "List::MoreUtils" => 0,
     "Log::Any" => 0,
+    "Package::Alias" => 0,
     "Sub::Spec" => "1.0.4",
     "perl" => "5.010000"
   },

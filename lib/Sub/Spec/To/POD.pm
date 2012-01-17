@@ -1,6 +1,6 @@
 package Sub::Spec::To::POD;
 {
-  $Sub::Spec::To::POD::VERSION = '0.19';
+  $Sub::Spec::To::POD::VERSION = '0.20';
 }
 
 use 5.010;
@@ -276,7 +276,7 @@ Sub::Spec::To::POD - Generate POD documentation from sub spec
 
 =head1 VERSION
 
-version 0.19
+version 0.20
 
 =head1 SYNOPSIS
 
