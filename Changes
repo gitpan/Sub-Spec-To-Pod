@@ -1,4 +1,10 @@
-Revision history for Sub::Spec::To::Pod
+Revision history for Sub::Spec::To::POD
+
+0.19     2012-01-16
+
+         No functional changes. Rename from Sub::Spec::To::Pod to
+         Sub::Spec::To::POD. Mark deprecated.
+
 
 0.18     2011-11-23
 

@@ -1,6 +1,6 @@
-package Sub::Spec::To::Pod;
-BEGIN {
-  $Sub::Spec::To::Pod::VERSION = '0.18';
+package Sub::Spec::To::POD;
+{
+  $Sub::Spec::To::POD::VERSION = '0.19';
 }
 
 use 5.010;
@@ -272,18 +272,25 @@ sub gen_module_subs_pod {
 
 =head1 NAME
 
-Sub::Spec::To::Pod - Generate POD documentation from sub spec
+Sub::Spec::To::POD - Generate POD documentation from sub spec
 
 =head1 VERSION
 
-version 0.18
+version 0.19
 
 =head1 SYNOPSIS
 
- % perl -MSub::Spec::To::Pod=gen_module_subs_pod \
+ % perl -MSub::Spec::To::POD=gen_module_subs_pod \
      -e'print gen_module_subs_pod(module=>"MyModule")'
 
 =head1 DESCRIPTION
+
+B<NOTICE>: This module and the L<Sub::Spec> standard is deprecated as of Jan
+2012. L<Rinci> is the new specification to replace Sub::Spec, it is about 95%
+compatible with Sub::Spec, but corrects a few issues and is more generic.
+L<Rias> is the Perl implementation for Rinci and many of its modules can handle
+existing Sub::Spec sub specs. L<Rias::Sub::To::POD> is the replacement for
+Sub::Spec::To::POD.
 
 This module generates API POD documentation from sub specs in a specified
 module. Example specification:
@@ -391,7 +398,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Steven Haryanto.
+This software is copyright (c) 2012 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
