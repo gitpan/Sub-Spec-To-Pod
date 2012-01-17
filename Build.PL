@@ -16,10 +16,10 @@ my %module_build_args = (
   "dist_author" => [
     "Steven Haryanto <stevenharyanto\@gmail.com>"
   ],
-  "dist_name" => "Sub-Spec-To-POD",
-  "dist_version" => "0.20",
+  "dist_name" => "Sub-Spec-To-Pod",
+  "dist_version" => "0.21",
   "license" => "perl",
-  "module_name" => "Sub::Spec::To::POD",
+  "module_name" => "Sub::Spec::To::Pod",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {

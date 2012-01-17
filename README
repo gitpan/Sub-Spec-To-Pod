@@ -1,11 +1,11 @@
 NAME
-    Sub::Spec::To::POD - Generate POD documentation from sub spec
+    Sub::Spec::To::Pod - Generate POD documentation from sub spec
 
 VERSION
-    version 0.20
+    version 0.21
 
 SYNOPSIS
-     % perl -MSub::Spec::To::POD=gen_module_subs_pod \
+     % perl -MSub::Spec::To::Pod=gen_module_subs_pod \
          -e'print gen_module_subs_pod(module=>"MyModule")'
 
 DESCRIPTION
@@ -14,7 +14,7 @@ DESCRIPTION
     95% compatible with Sub::Spec, but corrects a few issues and is more
     generic. Rias is the Perl implementation for Rinci and many of its
     modules can handle existing Sub::Spec sub specs. Rias::Sub::To::POD is
-    the replacement for Sub::Spec::To::POD.
+    the replacement for Sub::Spec::To::Pod.
 
     This module generates API POD documentation from sub specs in a
     specified module. Example specification:

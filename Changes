@@ -1,4 +1,9 @@
-Revision history for Sub::Spec::To::POD
+Revision history for Sub::Spec::To::Pod
+
+0.21	 2012-01-16
+
+	 Cancel rename to Sub::Spec::To::Pod to avoid name clashes.
+
 
 0.20	 2012-01-16
 

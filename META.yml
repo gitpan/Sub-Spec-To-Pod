@@ -12,7 +12,7 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Sub-Spec-To-POD
+name: Sub-Spec-To-Pod
 requires:
   Data::Dump::Partial: 0
   Data::Sah: 0
@@ -24,6 +24,6 @@ requires:
   Sub::Spec: 1.0.4
   perl: 5.010000
 resources:
-  homepage: http://search.cpan.org/dist/Sub-Spec-To-POD/
-  repository: http://github.com/sharyanto/perl-Sub-Spec-To-POD
-version: 0.20
+  homepage: http://search.cpan.org/dist/Sub-Spec-To-Pod/
+  repository: http://github.com/sharyanto/perl-Sub-Spec-To-Pod
+version: 0.21
