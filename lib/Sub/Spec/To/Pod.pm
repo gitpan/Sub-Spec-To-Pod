@@ -12,7 +12,7 @@ require Exporter;
 our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw(spec_to_pod gen_module_subs_pod);
 
-our $VERSION = '0.21'; # VERSION
+our $VERSION = '0.22'; # VERSION
 
 our %SPEC;
 
@@ -103,20 +103,20 @@ _
 
     my $args  = $sub_spec->{args} // {};
     $args = { map {$_ => _parse_schema($args->{$_})} keys %$args };
-    my $has_cat = grep { $_->{clause_sets}[0]{arg_category} }
+    my $has_cat = grep { $_->[1]{arg_category} }
         values %$args;
 
     if (scalar keys %$args) {
         my $noted_star_req;
         my $prev_cat;
         for my $name (sort {
-            (($args->{$a}{clause_sets}[0]{arg_category} // "") cmp
-                 ($args->{$b}{clause_sets}[0]{arg_category} // "")) ||
-                     (($args->{$a}{clause_sets}[0]{arg_pos} // 9999) <=>
-                          ($args->{$b}{clause_sets}[0]{arg_pos} // 9999)) ||
+            (($args->{$a}[1]{arg_category} // "") cmp
+                 ($args->{$b}[1]{arg_category} // "")) ||
+                     (($args->{$a}[1]{arg_pos} // 9999) <=>
+                          ($args->{$b}[1]{arg_pos} // 9999)) ||
                               ($a cmp $b) } keys %$args) {
             my $arg = $args->{$name};
-            my $ah0 = $arg->{clause_sets}[0];
+            my $ah0 = $arg->[1];
 
             my $cat = $ah0->{arg_category} // "";
             if (!defined($prev_cat) || $prev_cat ne $cat) {
@@ -131,13 +131,13 @@ _
 
             $pod .= "=item * B<$name>".($ah0->{req} ? "*" : "")." => ";
             my $type;
-            if ($arg->{type} eq 'any') {
+            if ($arg->[0] eq 'any') {
                 my @schemas = map {_parse_schema($_)} @{$ah0->{of}};
-                my @types   = map {$_->{type}} @schemas;
+                my @types   = map {$_->[0]} @schemas;
                 @types      = sort List::MoreUtils::uniq(@types);
                 $type       = join("|", @types);
             } else {
-                $type       = $arg->{type};
+                $type       = $arg->[0];
             }
             $pod .= "I<$type>";
             $pod .= " (default ".
@@ -273,7 +273,7 @@ Sub::Spec::To::Pod - Generate POD documentation from sub spec
 
 =head1 VERSION
 
-version 0.21
+version 0.22
 
 =head1 SYNOPSIS
 
